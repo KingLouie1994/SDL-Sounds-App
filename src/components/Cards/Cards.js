@@ -3,9 +3,9 @@ import styles from "./Cards.module.css";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
 import useSound from "use-sound";
-import exampleSound from "../../sounds/Moin_Luis.mp3";
 
 const Cards = () => {
+  const exampleSound = "sounds/Moin_Luis.mp3";
   const [play] = useSound(exampleSound);
 
   return (
