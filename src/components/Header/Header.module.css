@@ -1,12 +1,16 @@
 .header {
   position: absolute;
   width: 90vw;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  border-bottom: solid 3px white;
 }
 
 .heading {
+  font-family: Ruluko;
   margin: 0;
+  font-size: 40px;
 }
