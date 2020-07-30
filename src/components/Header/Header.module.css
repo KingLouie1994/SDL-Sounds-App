@@ -1,3 +1,12 @@
-.Heading {
-    margin: 0;
+.header {
+  position: absolute;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.heading {
+  margin: 0;
 }
