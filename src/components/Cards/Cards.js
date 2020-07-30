@@ -4,11 +4,10 @@ import sounds from "./soundSource";
 import Card from "./Card";
 
 const Cards = () => {
-
   return (
     <div className={styles.container}>
       {sounds.map((sound) => {
-          return <Card sound={sound}/>
+        return <Card key={sound.id} sound={sound} />;
       })}
     </div>
   );
