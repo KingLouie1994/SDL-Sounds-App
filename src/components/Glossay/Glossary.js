@@ -18,6 +18,14 @@ const Glossary = () => {
       </div>
       <div className={styles.glossary}>
         <h2 className={styles.heading}>Glossar</h2>
+        {Data.map((shortcut) => {
+          return (
+            <div className={styles.shortcut}>
+              <p className={styles.text}>{shortcut.shortcut}</p>
+              <p className={styles.text}>{shortcut.explanation}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
