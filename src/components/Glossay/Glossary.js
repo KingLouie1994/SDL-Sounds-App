@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Glossary.module.css";
+import Data from "./Data";
 
 import KeyboardBackspaceRoundedIcon from "@material-ui/icons/KeyboardBackspaceRounded";
 
