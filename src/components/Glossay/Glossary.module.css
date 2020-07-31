@@ -1,0 +1,21 @@
+.container {
+  width: 90vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  height: auto;
+  background-color: #f93333;
+}
+
+.backHome {
+  margin-top: 5vw;
+  background-color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+}
+
+.glossary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
