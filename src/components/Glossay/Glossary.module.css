@@ -19,3 +19,15 @@
   align-items: center;
   color: white;
 }
+
+.shortcut {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
