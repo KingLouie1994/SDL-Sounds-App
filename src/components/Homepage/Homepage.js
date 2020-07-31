@@ -1,15 +1,16 @@
 import React from "react";
+import styles from "./Homepage.module.css";
 
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <Link to="/sounds">
-        <button>Sounds</button>
+        <button className={styles.link}>Sounds</button>
       </Link>
       <Link to="glossar">
-        <button>Glossar</button>
+        <button className={styles.link}>Glossar</button>
       </Link>
     </div>
   );

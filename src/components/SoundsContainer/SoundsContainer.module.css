@@ -5,3 +5,10 @@
   height: auto;
   background-color: #f93333;
 }
+
+.backHome {
+  margin-top: 5vw;
+  background-color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+}
