@@ -62,6 +62,7 @@ const Glossary = () => {
       </div>
       <div className={styles.glossary}>
         <h2 className={styles.heading}>Glossar</h2>
+        <p>(Filter funktionieren noch nicht wie sie sollen)</p>
         <Filter handleSortChange={handleSortChange} />
         {Data.map((shortcut) => {
           return (
