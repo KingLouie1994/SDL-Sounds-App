@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Glossary = () => {
   const [sort, setSort] = useState("");
 
-  const sortId = (a, b) => {
+  const fromAToZ = (a, b) => {
     if (a.id < b.id) {
       return -1;
     } else if (a.id > b.id) {
@@ -20,20 +20,10 @@ const Glossary = () => {
     }
   };
 
-  const fromAToZ = (a, b) => {
-    if (a.shortcut < b.shortcut) {
-      return -1;
-    } else if (a.shortcut > b.shortcut) {
-      return 1;
-    } else {
-      return 0;
-    }
-  };
-
   const fromZToA = (a, b) => {
-    if (a.shortcut > b.shortcut) {
+    if (a.id > b.id) {
       return -1;
-    } else if (a.shortcut < b.shortcut) {
+    } else if (a.id < b.id) {
       return 1;
     } else {
       return 0;
@@ -42,12 +32,10 @@ const Glossary = () => {
 
   const handleSortChange = (e) => {
     setSort(e.target.value);
-    if (e.target.value === "aToZ") {
-      Data.sort(fromAToZ);
-    } else if (e.target.value === "zToA") {
+    if (e.target.value === "zToA") {
       Data.sort(fromZToA);
     } else {
-      Data.sort(sortId);
+      Data.sort(fromAToZ);
     }
   };
 

@@ -12,8 +12,7 @@ const Filter = (props) => {
             onChange={props.handleSortChange}
             className={styles.select}
           >
-            <option value="">...</option>
-            <option value="aToZ">A bis Z</option>
+            <option value="">A bis Z</option>
             <option value="zToA">Z bis A</option>
           </select>
         </label>

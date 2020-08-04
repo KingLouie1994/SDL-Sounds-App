@@ -1,7 +1,7 @@
 const Data = [
   { id: 0, shortcut: "At", explanation: "Abtransport" },
   { id: 1, shortcut: "wS", explanation: "wie Schwein" },
-  { id: 2, shortcut: "bws", explanation: "breit wie Schwein" },
+  { id: 2, shortcut: "bwS", explanation: "breit wie Schwein" },
   { id: 3, shortcut: "SDL", explanation: "Set Dirim Lah" },
   { id: 4, shortcut: "iA", explanation: "im Arsch" },
   { id: 5, shortcut: "oA", explanation: "ohne Alkohol" },
