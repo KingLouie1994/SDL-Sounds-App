@@ -20,6 +20,12 @@
   color: white;
 }
 
+.filterAndSearch {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
 .shortcut {
   width: 80%;
   display: flex;
