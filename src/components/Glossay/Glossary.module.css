@@ -26,6 +26,20 @@
   justify-content: space-evenly;
 }
 
+.searchInput {
+  top: 10px;
+  left: 38px;
+  font-size: 14px;
+  background: white;
+  color: #5a6674;
+  width: 100px;
+  height: 20px;
+  border: solid 1px black;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 15px;
+}
+
 .shortcut {
   width: 80%;
   display: flex;
