@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Glossary.module.css";
 import Data from "./Data";
 import Filter from "../Filter/Filter";
+import Search from "../Search/Search";
 
 import KeyboardBackspaceRoundedIcon from "@material-ui/icons/KeyboardBackspaceRounded";
 
@@ -52,6 +53,7 @@ const Glossary = () => {
         <h2 className={styles.heading}>Glossar</h2>
         <div className={styles.filterAndSearch}>
           <Filter handleSortChange={handleSortChange} />
+          <Search />
         </div>
         {Data.map((shortcut) => {
           return (
