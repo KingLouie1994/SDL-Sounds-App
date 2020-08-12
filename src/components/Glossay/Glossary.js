@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./Glossary.module.css";
 import Data from "./Data";
 import Filter from "../Filter/Filter";
-import Search from "../Search/Search";
 
 import KeyboardBackspaceRoundedIcon from "@material-ui/icons/KeyboardBackspaceRounded";
 
@@ -10,6 +9,7 @@ import { Link } from "react-router-dom";
 
 const Glossary = () => {
   const [sort, setSort] = useState("");
+  const [search, setSearch] = useState("");
 
   const fromAToZ = (a, b) => {
     if (a.id < b.id) {
@@ -40,6 +40,12 @@ const Glossary = () => {
     }
   };
 
+  const editSearchTerm = (e) => {
+    setSearch(e.target.value);
+  };
+
+  console.log(Data);
+
   return (
     <div className={styles.container}>
       <div>
@@ -53,15 +59,26 @@ const Glossary = () => {
         <h2 className={styles.heading}>Glossar</h2>
         <div className={styles.filterAndSearch}>
           <Filter handleSortChange={handleSortChange} />
-          <Search />
+          <div className={styles.container}>
+            <input
+              type="text"
+              value={search}
+              onChange={editSearchTerm}
+              placeholder="SDL!"
+            />
+          </div>
         </div>
         {Data.map((shortcut) => {
-          return (
-            <div className={styles.shortcut}>
-              <p className={styles.text}>{shortcut.shortcut}</p>
-              <p className={styles.text}>{shortcut.explanation}</p>
-            </div>
-          );
+          if (shortcut.shortcut.toLowerCase().includes(search.toLowerCase())) {
+            return (
+              <div className={styles.shortcut} key={shortcut.id}>
+                <p className={styles.text}>{shortcut.shortcut}</p>
+                <p className={styles.text}>{shortcut.explanation}</p>
+              </div>
+            );
+          } else {
+            return null;
+          }
         })}
       </div>
     </div>
