@@ -32,11 +32,12 @@
   font-size: 14px;
   background: white;
   color: #5a6674;
-  width: 120px;
+  width: 100px;
   height: 20px;
   border: solid 1px black;
   border-radius: 5px;
   outline: none;
+  margin-left: 15px;
 }
 
 .shortcut {

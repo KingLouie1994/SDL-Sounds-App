@@ -58,17 +58,27 @@ const Glossary = () => {
         <div className={styles.filterAndSearch}>
           <Filter handleSortChange={handleSortChange} />
           <div>
+            Suche:
             <input
               className={styles.searchInput}
               type="text"
               value={search}
               onChange={editSearchTerm}
-              placeholder="SDL!"
+              placeholder="lol"
             />
           </div>
         </div>
         {Data.map((shortcut) => {
           if (shortcut.shortcut.toLowerCase().includes(search.toLowerCase())) {
+            return (
+              <div className={styles.shortcut} key={shortcut.id}>
+                <p className={styles.text}>{shortcut.shortcut}</p>
+                <p className={styles.text}>{shortcut.explanation}</p>
+              </div>
+            );
+          } else if (
+            shortcut.explanation.toLowerCase().includes(search.toLowerCase())
+          ) {
             return (
               <div className={styles.shortcut} key={shortcut.id}>
                 <p className={styles.text}>{shortcut.shortcut}</p>
