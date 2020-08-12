@@ -44,8 +44,6 @@ const Glossary = () => {
     setSearch(e.target.value);
   };
 
-  console.log(Data);
-
   return (
     <div className={styles.container}>
       <div>
@@ -59,8 +57,9 @@ const Glossary = () => {
         <h2 className={styles.heading}>Glossar</h2>
         <div className={styles.filterAndSearch}>
           <Filter handleSortChange={handleSortChange} />
-          <div className={styles.container}>
+          <div>
             <input
+              className={styles.searchInput}
               type="text"
               value={search}
               onChange={editSearchTerm}
