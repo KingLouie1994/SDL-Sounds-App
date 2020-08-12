@@ -52,7 +52,6 @@ const Glossary = () => {
         <h2 className={styles.heading}>Glossar</h2>
         <div className={styles.filterAndSearch}>
           <Filter handleSortChange={handleSortChange} />
-          Suche:
         </div>
         {Data.map((shortcut) => {
           return (
