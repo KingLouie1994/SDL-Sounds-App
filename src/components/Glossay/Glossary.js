@@ -76,16 +76,18 @@ const Glossary = () => {
                 <p className={styles.text}>{shortcut.explanation}</p>
               </div>
             );
-          } else if (
-            shortcut.explanation.toLowerCase().includes(search.toLowerCase())
-          ) {
-            return (
-              <div className={styles.shortcut} key={shortcut.id}>
-                <p className={styles.text}>{shortcut.shortcut}</p>
-                <p className={styles.text}>{shortcut.explanation}</p>
-              </div>
-            );
-          } else {
+          }
+          //else if (
+          //   shortcut.explanation.toLowerCase().includes(search.toLowerCase())
+          // ) {
+          //   return (
+          //     <div className={styles.shortcut} key={shortcut.id}>
+          //       <p className={styles.text}>{shortcut.shortcut}</p>
+          //       <p className={styles.text}>{shortcut.explanation}</p>
+          //     </div>
+          //   );
+          // }
+          else {
             return null;
           }
         })}
