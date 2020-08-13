@@ -13,23 +13,22 @@ import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
 const CssTextField = withStyles({
-  input: {
-    color: "white",
-  },
   root: {
     "& label": {
       color: "white",
     },
-    "& label.Mui-focused": {
+    "& .MuiInputBase-input": {
       color: "white",
+    },
+    "& .MuiInput-underline": {
+      color: "white !important",
+      borderBottomColor: "white !important",
+      marginTop: "15px",
     },
     "& .MuiInput-underline:after": {
       borderBottomColor: "white",
     },
     "& .MuiInput-underline:before": {
-      borderBottomColor: "white",
-    },
-    "& .MuiInput-underline:hover": {
       borderBottomColor: "white",
     },
   },
