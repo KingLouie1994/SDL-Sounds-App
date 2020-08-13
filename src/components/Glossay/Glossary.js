@@ -11,9 +11,11 @@ import SearchIcon from "@material-ui/icons/Search";
 
 import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-import InputAdornment from "@material-ui/core/InputAdornment";
 
 const CssTextField = withStyles({
+  input: {
+    color: "white",
+  },
   root: {
     "& label": {
       color: "white",
@@ -25,6 +27,9 @@ const CssTextField = withStyles({
       borderBottomColor: "white",
     },
     "& .MuiInput-underline:before": {
+      borderBottomColor: "white",
+    },
+    "& .MuiInput-underline:hover": {
       borderBottomColor: "white",
     },
   },
@@ -88,14 +93,7 @@ const Glossary = () => {
             onChange={editSearchTerm}
             className={styles.searchInput}
             id="custom-css-standard-input"
-            label="Search..."
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon style={{ color: "white" }} />
-                </InputAdornment>
-              ),
-            }}
+            label={<SearchIcon style={{ color: "white" }} />}
           />
         </div>
         {Data.map((shortcut) => {
