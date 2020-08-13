@@ -20,10 +20,8 @@ const CssTextField = withStyles({
     "& .MuiInputBase-input": {
       color: "white",
     },
-    "& .MuiInput-underline": {
-      color: "white !important",
-      borderBottomColor: "white !important",
-      marginTop: "15px",
+    "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
+      borderBottom: "2px solid white",
     },
     "& .MuiInput-underline:after": {
       borderBottomColor: "white",
