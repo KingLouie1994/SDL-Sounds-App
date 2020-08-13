@@ -7,11 +7,6 @@ import Filter from "../Filter/Filter";
 import { Link } from "react-router-dom";
 
 import KeyboardBackspaceRoundedIcon from "@material-ui/icons/KeyboardBackspaceRounded";
-import { makeStyles } from "@material-ui/core/styles";
-import Input from "@material-ui/core/Input";
-import InputLabel from "@material-ui/core/InputLabel";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControl from "@material-ui/core/FormControl";
 import SearchIcon from "@material-ui/icons/Search";
 
 const Glossary = () => {
@@ -66,22 +61,15 @@ const Glossary = () => {
           <div className={styles.filter}>
             <Filter handleSortChange={handleSortChange} />
           </div>
-          <div>
-            <FormControl className={styles.search}>
-              <InputLabel htmlFor="Search">Suche</InputLabel>
-              <Input
-                className={styles.searchInput}
-                type="text"
-                value={search}
-                onChange={editSearchTerm}
-                id="Search"
-                startAdornment={
-                  <InputAdornment position="start">
-                    <SearchIcon />
-                  </InputAdornment>
-                }
-              />
-            </FormControl>
+          <div className={styles.search}>
+            <SearchIcon />:
+            <input
+              className={styles.searchInput}
+              type="text"
+              value={search}
+              onChange={editSearchTerm}
+              placeholder="Search..."
+            />
           </div>
         </div>
         {Data.map((shortcut) => {
