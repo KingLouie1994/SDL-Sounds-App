@@ -7,6 +7,19 @@ import KeyboardBackspaceRoundedIcon from "@material-ui/icons/KeyboardBackspaceRo
 
 import { Link } from "react-router-dom";
 
+import { makeStyles } from "@material-ui/core/styles";
+import Input from "@material-ui/core/Input";
+import InputLabel from "@material-ui/core/InputLabel";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import FormControl from "@material-ui/core/FormControl";
+import SearchIcon from "@material-ui/icons/Search";
+
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+}));
+
 const Glossary = () => {
   const [sort, setSort] = useState("");
   const [search, setSearch] = useState("");
@@ -44,6 +57,8 @@ const Glossary = () => {
     setSearch(e.target.value);
   };
 
+  const classes = useStyles();
+
   return (
     <div className={styles.container}>
       <div>
@@ -58,14 +73,21 @@ const Glossary = () => {
         <div className={styles.filterAndSearch}>
           <Filter handleSortChange={handleSortChange} />
           <div>
-            Suche:
-            <input
-              className={styles.searchInput}
-              type="text"
-              value={search}
-              onChange={editSearchTerm}
-              placeholder="lol"
-            />
+            <FormControl className={classes.margin}>
+              <InputLabel htmlFor="Suche">Suche</InputLabel>
+              <Input
+                className={styles.searchInput}
+                type="text"
+                value={search}
+                onChange={editSearchTerm}
+                id="Suche"
+                startAdornment={
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
           </div>
         </div>
         {Data.map((shortcut) => {
