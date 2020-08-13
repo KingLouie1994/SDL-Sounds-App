@@ -1,24 +1,18 @@
 import React, { useState } from "react";
+
 import styles from "./Glossary.module.css";
 import Data from "./Data";
 import Filter from "../Filter/Filter";
 
-import KeyboardBackspaceRoundedIcon from "@material-ui/icons/KeyboardBackspaceRounded";
-
 import { Link } from "react-router-dom";
 
+import KeyboardBackspaceRoundedIcon from "@material-ui/icons/KeyboardBackspaceRounded";
 import { makeStyles } from "@material-ui/core/styles";
 import Input from "@material-ui/core/Input";
 import InputLabel from "@material-ui/core/InputLabel";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import FormControl from "@material-ui/core/FormControl";
 import SearchIcon from "@material-ui/icons/Search";
-
-const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: theme.spacing(1),
-  },
-}));
 
 const Glossary = () => {
   const [sort, setSort] = useState("");
@@ -57,8 +51,6 @@ const Glossary = () => {
     setSearch(e.target.value);
   };
 
-  const classes = useStyles();
-
   return (
     <div className={styles.container}>
       <div>
@@ -73,14 +65,14 @@ const Glossary = () => {
         <div className={styles.filterAndSearch}>
           <Filter handleSortChange={handleSortChange} />
           <div>
-            <FormControl className={classes.margin}>
-              <InputLabel htmlFor="Suche">Suche</InputLabel>
+            <FormControl className={styles.search}>
+              <InputLabel htmlFor="Search">Suche</InputLabel>
               <Input
                 className={styles.searchInput}
                 type="text"
                 value={search}
                 onChange={editSearchTerm}
-                id="Suche"
+                id="Search"
                 startAdornment={
                   <InputAdornment position="start">
                     <SearchIcon />

@@ -26,6 +26,11 @@
   justify-content: space-evenly;
 }
 
+.search {
+  color: white;
+  width: 70%;
+}
+
 .searchInput {
   font-size: 14px;
   color: white;
