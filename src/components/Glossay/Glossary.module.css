@@ -20,24 +20,36 @@
   color: white;
 }
 
+.heading {
+  margin-bottom: 30px;
+}
+
 .filterAndSearch {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  margin-bottom: 65px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  width: 180px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  width: 50%;
 }
 
 .searchInput {
-  top: 10px;
-  left: 38px;
-  font-size: 14px;
-  background: white;
-  color: #5a6674;
-  width: 100px;
+  width: 60%;
   height: 20px;
-  border: solid 1px black;
-  border-radius: 5px;
+  font-size: 14px;
   outline: none;
   margin-left: 15px;
+  border-radius: 5px;
 }
 
 .shortcut {
