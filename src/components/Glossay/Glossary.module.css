@@ -24,11 +24,16 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  align-items: center;
+}
+
+.filter {
+  width: 200px;
 }
 
 .search {
   color: white;
-  width: 70%;
+  width: 150px;
 }
 
 .searchInput {

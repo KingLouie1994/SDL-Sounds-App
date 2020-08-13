@@ -63,7 +63,9 @@ const Glossary = () => {
       <div className={styles.glossary}>
         <h2 className={styles.heading}>Glossar</h2>
         <div className={styles.filterAndSearch}>
-          <Filter handleSortChange={handleSortChange} />
+          <div className={styles.filter}>
+            <Filter handleSortChange={handleSortChange} />
+          </div>
           <div>
             <FormControl className={styles.search}>
               <InputLabel htmlFor="Search">Suche</InputLabel>
