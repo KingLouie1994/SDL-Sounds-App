@@ -90,34 +90,37 @@ const Glossary = () => {
             type="text"
             value={search}
             onChange={editSearchTerm}
-            className={styles.searchInput}
             id="custom-css-standard-input"
             label={<SearchIcon style={{ color: "white" }} />}
           />
         </div>
-        {Data.map((shortcut) => {
-          if (shortcut.shortcut.toLowerCase().includes(search.toLowerCase())) {
-            return (
-              <div className={styles.shortcut} key={shortcut.id}>
-                <p className={styles.text}>{shortcut.shortcut}</p>
-                <p className={styles.text}>{shortcut.explanation}</p>
-              </div>
-            );
-          }
-          //else if (
-          //   shortcut.explanation.toLowerCase().includes(search.toLowerCase())
-          // ) {
-          //   return (
-          //     <div className={styles.shortcut} key={shortcut.id}>
-          //       <p className={styles.text}>{shortcut.shortcut}</p>
-          //       <p className={styles.text}>{shortcut.explanation}</p>
-          //     </div>
-          //   );
-          // }
-          else {
-            return null;
-          }
-        })}
+        <div className={styles.textContainer}>
+          {Data.map((shortcut) => {
+            if (
+              shortcut.shortcut.toLowerCase().includes(search.toLowerCase())
+            ) {
+              return (
+                <div className={styles.shortcut} key={shortcut.id}>
+                  <p className={styles.text}>{shortcut.shortcut}</p>
+                  <p className={styles.text}>{shortcut.explanation}</p>
+                </div>
+              );
+            }
+            //else if (
+            //   shortcut.explanation.toLowerCase().includes(search.toLowerCase())
+            // ) {
+            //   return (
+            //     <div className={styles.shortcut} key={shortcut.id}>
+            //       <p className={styles.text}>{shortcut.shortcut}</p>
+            //       <p className={styles.text}>{shortcut.explanation}</p>
+            //     </div>
+            //   );
+            // }
+            else {
+              return null;
+            }
+          })}
+        </div>
       </div>
     </div>
   );
